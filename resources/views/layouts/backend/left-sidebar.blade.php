@@ -30,7 +30,11 @@
     <!-- Menu -->
     <div class="menu">
         <ul class="list">
-            @for ($i = 0; $i < sizeof(modul()); $i++)
+            <li class="header">MAIN NAVIGATION</li>
+            @php
+                $modul = modul();
+            @endphp
+            @for ($i = 0; $i < sizeof($modul); $i++)
             @include($modul[$i] . "::sidebar")
             @endfor
         </ul>

@@ -11,19 +11,7 @@
 |
 */
 
-use Illuminate\Support\Facades\Auth;
-
-Route::get('/', function () {
-    if (Auth::check()) {
-        return redirect()->route('home');
-    }else {
-        return redirect()->route('login');
-    }
-    // return view('welcome');
+Route::middleware(['auth', 'userIsOnline'])->group(function () {
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 });
 
-Auth::routes([
-    'register' => false
-]);
-
-// Route::get('/home', 'HomeController@index')->name('home');
