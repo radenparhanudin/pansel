@@ -32,6 +32,6 @@ class HomeController extends Controller
         // return $roles;
         // $user = new User;
         // return $user->allOnline();
-        return view('backup.home');
+        return view('layouts.backend.blank');
     }
 }

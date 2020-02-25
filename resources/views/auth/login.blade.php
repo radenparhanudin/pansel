@@ -3,14 +3,14 @@
     <body class="login-page">
         <div class="login-box">
             <div class="logo">
-                <a href="javascript:void(0);">Pan<b>Sel</b></a>
-                <span>Jabatan Pimpinan Tinggi Pratama</span>
+                <a href="javascript:void(0);">Seleksi<b>JPTP</b></a>
+                <span>{{ config('app.sub_name') }}</span>
             </div>
             <div class="card">
                 <div class="body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-                        <div class="msg text-danger">Silahkan login dengan menggunakan Username dan Password saat mendaftar!</div>
+                        <div class="msg text-danger">Silahkan masukkan Username dan Password!</div>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="material-icons">person</i>

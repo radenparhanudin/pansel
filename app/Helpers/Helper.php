@@ -15,3 +15,18 @@ if (!function_exists('set_active')) {
         }
     }
 }
+
+if (! function_exists('modul_asset')) {
+    function modul_asset($modul_name, $path)
+    {
+        return url('/Modules') . "/" . $modul_name . "/public/" . $path;
+    }
+}
+
+if (! function_exists('modul')) {
+    function modul()
+    {
+        $modul = [];
+        return $modul;
+    }
+}
