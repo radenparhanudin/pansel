@@ -29,7 +29,7 @@ if (! function_exists('modul_asset')) {
 if (! function_exists('modul')) {
     function modul()
     {
-        $modul = ['dashboard'];
+        $modul = ['dashboard', 'masterdata'];
         return $modul;
     }
 }

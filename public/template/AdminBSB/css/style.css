@@ -9864,7 +9864,7 @@ fieldset[disabled] .form-control {
     display: inline-flex;
     vertical-align: middle;
     width: 100%;
-    padding: 10px 13px;
+    padding: 5px 13px;
 }
 .sidebar .menu .list a:hover,
 .sidebar .menu .list a:active,
@@ -9892,9 +9892,10 @@ fieldset[disabled] .form-control {
     font-weight: normal;
     font-size: 14px;
     margin: 3px 0 1px 6px;
+    padding-top: 4px;
 }
 .sidebar .menu .list .ml-menu li a {
-    padding-left: 55px;
+    padding-left: 45px;
     padding-top: 7px;
     padding-bottom: 7px;
 }

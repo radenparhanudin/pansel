@@ -11,19 +11,6 @@
 |
 */
 
-use Illuminate\Support\Facades\Auth;
-
-Route::get('/', function () {
-    if (Auth::check()) {
-        return redirect()->route('dashboard');
-    }else {
-        return redirect()->route('login');
-    }
-    // return view('welcome');
+Route::group(['prefix' => 'g/master-data',  'middleware' => ['auth', 'userIsOnline']], function(){
+    Route::get('/', 'MasterDataController@index');
 });
-
-Auth::routes([
-    'register' => false
-]);
-
-// Route::get('/home', 'HomeController@index')->name('home');
